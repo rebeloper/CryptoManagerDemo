@@ -32,6 +32,8 @@ class PasswordViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         layoutViews()
+        
+        checkMasterPassword()
     }
     
     fileprivate func layoutViews() {
@@ -50,5 +52,9 @@ class PasswordViewController: UIViewController {
         submitButton.translatesAutoresizingMaskIntoConstraints = false
         submitButton.centerXAnchor.constraint(equalTo: passwordTextField.centerXAnchor).isActive = true
         submitButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 12).isActive = true
+    }
+    
+    fileprivate func checkMasterPassword() {
+        
     }
 }
