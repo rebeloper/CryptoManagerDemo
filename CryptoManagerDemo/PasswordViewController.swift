@@ -23,16 +23,10 @@ class PasswordViewController: UIViewController {
         return button
     }()
     
-    @objc
-    func submitButtonTapped() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemYellow
         layoutViews()
-        
         checkMasterPassword()
     }
     
@@ -55,6 +49,35 @@ class PasswordViewController: UIViewController {
     }
     
     fileprivate func checkMasterPassword() {
-        
+//        CryptoManager.doesMasterPasswordExist { (result) in
+//            switch result {
+//            case .success(let exists):
+//                if !exists {
+//                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+//                        self.dismiss(animated: true, completion: nil)
+//                    }
+//                }
+//            case .failure(let err):
+//                Alert.show(error: err, on: self)
+//            }
+//        }
+    }
+    
+    @objc
+    func submitButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
+//        guard let text = self.passwordTextField.text else { return }
+//        CryptoManager.getMasterPassword { (result) in
+//            switch result {
+//            case .success(let password):
+//                if password == text {
+//                    self.dismiss(animated: true, completion: nil)
+//                } else {
+//                    Alert.showInfo(message: "Wrong password", on: self)
+//                }
+//            case .failure(let err):
+//                Alert.show(error: err, on: self)
+//            }
+//        }
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		C9C3EC42255999D000C06BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C3EC41255999D000C06BCF /* Assets.xcassets */; };
 		C9C3EC45255999D000C06BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C3EC43255999D000C06BCF /* LaunchScreen.storyboard */; };
 		C9C3EC5125599A8600C06BCF /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3EC5025599A8600C06BCF /* PasswordViewController.swift */; };
+		C9C3EC5B2559B56F00C06BCF /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = C9C3EC5A2559B56F00C06BCF /* Valet */; };
+		C9C3EC5E2559B67200C06BCF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3EC5D2559B67200C06BCF /* Alert.swift */; };
+		C9C3EC612559B7B900C06BCF /* CryptoManager+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C3EC602559B7B900C06BCF /* CryptoManager+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		C9C3EC44255999D000C06BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9C3EC46255999D000C06BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9C3EC5025599A8600C06BCF /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		C9C3EC5D2559B67200C06BCF /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C9C3EC602559B7B900C06BCF /* CryptoManager+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoManager+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C3EC5B2559B56F00C06BCF /* Valet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,8 @@
 				C9C3EC3A255999CF00C06BCF /* SceneDelegate.swift */,
 				C9C3EC3C255999CF00C06BCF /* MainViewController.swift */,
 				C9C3EC5025599A8600C06BCF /* PasswordViewController.swift */,
+				C9C3EC602559B7B900C06BCF /* CryptoManager+.swift */,
+				C9C3EC5D2559B67200C06BCF /* Alert.swift */,
 				C9C3EC41255999D000C06BCF /* Assets.xcassets */,
 				C9C3EC43255999D000C06BCF /* LaunchScreen.storyboard */,
 				C9C3EC46255999D000C06BCF /* Info.plist */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = CryptoManagerDemo;
+			packageProductDependencies = (
+				C9C3EC5A2559B56F00C06BCF /* Valet */,
+			);
 			productName = CryptoManagerDemo;
 			productReference = C9C3EC35255999CF00C06BCF /* CryptoManagerDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +121,9 @@
 				Base,
 			);
 			mainGroup = C9C3EC2C255999CF00C06BCF;
+			packageReferences = (
+				C9C3EC592559B56F00C06BCF /* XCRemoteSwiftPackageReference "Valet" */,
+			);
 			productRefGroup = C9C3EC36255999CF00C06BCF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,9 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C3EC5E2559B67200C06BCF /* Alert.swift in Sources */,
 				C9C3EC3D255999CF00C06BCF /* MainViewController.swift in Sources */,
 				C9C3EC5125599A8600C06BCF /* PasswordViewController.swift in Sources */,
 				C9C3EC39255999CF00C06BCF /* AppDelegate.swift in Sources */,
+				C9C3EC612559B7B900C06BCF /* CryptoManager+.swift in Sources */,
 				C9C3EC3B255999CF00C06BCF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9C3EC592559B56F00C06BCF /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Valet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9C3EC5A2559B56F00C06BCF /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9C3EC592559B56F00C06BCF /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9C3EC2D255999CF00C06BCF /* Project object */;
 }
